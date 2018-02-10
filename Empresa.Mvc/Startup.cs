@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Empresa.Repositorios.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace Empresa.Mvc
 {
@@ -54,6 +55,16 @@ namespace Empresa.Mvc
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseCookieAuthentication(new CookieAuthenticationOptions {
+                AuthenticationScheme = Configuration.GetSection("TipoAutenticacao").Value,
+                LoginPath = new PathString("/Login/Index"),
+                AccessDeniedPath = new PathString("/Login/AcessoNegado"),
+                AutomaticAuthenticate = true,
+                AutomaticChallenge = true,
+                ExpireTimeSpan =    TimeSpan.FromMinutes(5)//tEMPO DE INATIVIDADE
+                //Caminho do login. Controller é o Login
+            });//Recebe parâmtero. Em vez de colocar a palavra aí dentro vamos ao...
 
             app.UseStaticFiles();
 
