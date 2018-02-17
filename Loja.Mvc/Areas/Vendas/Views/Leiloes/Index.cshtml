@@ -55,9 +55,21 @@
             <img src="~/ImagemProduto/Miniatura?produtoId=@item.Id" title="@item.Nome" class="img-circle" />
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id },new {target="_blank"}) |
         </td>
     </tr>
 }
 
 </table>
+@section scripts{
+        
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script type="text/javascript">
+
+        const connection = $.hubConnection();
+        const hub = connection.createHubProxy("LeilaoHub");
+
+        hub.on("atualizarOfertas", function () { document.location.reload(); })
+        connection.start()
+    </script>
+}

@@ -15,5 +15,10 @@ namespace Loja.Mvc.Areas.Vendas.Controllers
         {
             return View(Mapeamento.Mapear(_db.Produtos.Where(p=>p.EmLeilao).ToList())); //Eu não sei quantos são... por isso uma lista
         }
+
+        public ActionResult Details(int id)
+        {
+            return View(Mapeamento.Mapear(_db.Produtos.Find(id)));
+        }
     }
 }
