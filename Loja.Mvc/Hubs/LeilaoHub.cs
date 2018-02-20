@@ -10,13 +10,25 @@ namespace Loja.Mvc.Hubs
     public class LeilaoHub : Hub
     {
         public async Task Participar(string nomeParticipante, string produtoId) //O Async aparece porque foi utilizado o await abaixo 
-        {   
+        {
             //ConnectionId é um guid, o qual foi gerado 
-            await Groups.Add(Context.ConnectionId,produtoId);//O grupo foi criado e tem o nome de produto "1"
+            await Groups.Add(Context.ConnectionId, produtoId);//O grupo foi criado e tem o nome de produto "1"
             //Ctrl K D para identar
             //Se é para escrever na tela é JavaScript
-            Clients.Group(produtoId).adicionarMensagem(nomeParticipante, Context.ConnectionId,"Bom leilão a todos!");
+            Clients.Group(produtoId).adicionarMensagem(nomeParticipante, Context.ConnectionId, "Bom leilão a todos!");
 
         }
+
+        public void EnviarLance(string nomeParticipante, string valor, string produtoId)
+        {
+            Clients.Group(produtoId).adicionarMensagem(nomeParticipante, Context.ConnectionId, valor);
+        }
+
+        public void EnviarLike(string nomeParticipante, string connectionIdDestinatario)
+        {
+            //Apenas para um cliente
+            Clients.Client(connectionIdDestinatario).receberLike(nomeParticipante);
+        }
+
     }
 }

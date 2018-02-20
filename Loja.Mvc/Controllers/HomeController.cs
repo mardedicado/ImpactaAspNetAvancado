@@ -18,6 +18,14 @@ namespace Loja.Mvc.Controllers
             return View();
         }
 
+        [AllowAnonymous]//Liberar a tela abaixo para alguns
+        public ActionResult DefinirLinguagem(string linguagem)
+        {
+            Response.Cookies["LinguagemSelecionada"].Value = linguagem;
+
+            return Redirect(Request.UrlReferrer.ToString());
+        }
+
         [AuthorizeRole(Perfil.Administrador,Perfil.Comprador)]
         public ActionResult About()
         {

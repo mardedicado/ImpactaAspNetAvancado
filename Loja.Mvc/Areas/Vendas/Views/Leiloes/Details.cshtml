@@ -60,7 +60,7 @@
             @Html.Label("Nome", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="input-group" style="display: inline-flex">
-                    @Html.TextBox("nomeParticipante", ((ClaimsIdentity)User.Identity).FindFirst("Nome").Value, new { @class = "form-control" })
+                    @Html.TextBox("nomeParticipante", ((ClaimsIdentity)User.Identity).FindFirst("Nome")?.Value, new { @class = "form-control" })
                     <span class="input-group-btn">
                         <button type="button" id="entrarButton" class="btn btn-default">Participar</button>
                     </span>
