@@ -173,6 +173,15 @@ namespace Loja.Mvc.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+
+        //API retorna informação (formato json representando o formato)
+        public ActionResult VerificarDisponibilidadeEmail(string email)
+        {
+            return Json(UserManager.FindByEmail(email)==null);
+        }
+
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
