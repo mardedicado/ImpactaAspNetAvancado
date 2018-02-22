@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Resources", "Loja.Reso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.MvcTests", "Loja.MvcTests\Loja.MvcTests.csproj", "{B14F31A1-8FC8-441F-91B6-D3EE0436C703}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BancoImobiliario", "BancoImobiliario", "{1CD5A297-5832-4600-83B1-BAB6ABD4902E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoImobiliario.Dominio", "BancoImobiliario.Dominio\BancoImobiliario.Dominio.csproj", "{9FADE396-12A6-4BAA-8A21-D0EE693B356F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoImobiliario.DominioTests", "BancoImobiliario.DominioTests\BancoImobiliario.DominioTests.csproj", "{34D23E8A-A85F-4AD5-B4C9-0F1790A54BCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +47,14 @@ Global
 		{B14F31A1-8FC8-441F-91B6-D3EE0436C703}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B14F31A1-8FC8-441F-91B6-D3EE0436C703}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B14F31A1-8FC8-441F-91B6-D3EE0436C703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FADE396-12A6-4BAA-8A21-D0EE693B356F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FADE396-12A6-4BAA-8A21-D0EE693B356F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FADE396-12A6-4BAA-8A21-D0EE693B356F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FADE396-12A6-4BAA-8A21-D0EE693B356F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34D23E8A-A85F-4AD5-B4C9-0F1790A54BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D23E8A-A85F-4AD5-B4C9-0F1790A54BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D23E8A-A85F-4AD5-B4C9-0F1790A54BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D23E8A-A85F-4AD5-B4C9-0F1790A54BCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,5 +65,7 @@ Global
 		{3CF1E0B2-8B77-4989-A55F-F79679840979} = {DE5DB936-6CD8-43B2-B335-123F687ED707}
 		{41A4EE2C-B423-47D3-99EC-19EA722CAF0B} = {DE5DB936-6CD8-43B2-B335-123F687ED707}
 		{B14F31A1-8FC8-441F-91B6-D3EE0436C703} = {DE5DB936-6CD8-43B2-B335-123F687ED707}
+		{9FADE396-12A6-4BAA-8A21-D0EE693B356F} = {1CD5A297-5832-4600-83B1-BAB6ABD4902E}
+		{34D23E8A-A85F-4AD5-B4C9-0F1790A54BCB} = {1CD5A297-5832-4600-83B1-BAB6ABD4902E}
 	EndGlobalSection
 EndGlobal

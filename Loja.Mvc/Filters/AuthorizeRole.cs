@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Loja.Mvc.Filters
 {
+    //As permissões estão no numerador. Qual é a profissão? Leiloeiro
     public class AuthorizeRole : AuthorizeAttribute
     {
         public AuthorizeRole(params Perfil[] perfis)    //Params associado com vetor. Coleção de parâmetros, ou seja, uma lista.
